@@ -1,0 +1,40 @@
+.nav2 {
+  height: 20vh;
+  width: 100vw;
+}
+
+.nav2-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nav2-btn {
+  /* font-weight: bold; */
+  font-size: 120%;
+  display: block;
+  width: auto;
+  border: none;
+  background: none;
+  border-radius: 10px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  cursor: pointer;
+}
+
+.nav2-btn:hover {
+  background-color: rgb(193, 208, 216, 0.4);
+}
+
+.nav2-btn:focus {
+  background-color: rgb(183, 37, 40, 0.4);
+  outline: 0;
+}
