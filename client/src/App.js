@@ -9,6 +9,8 @@ import Content from "./components/parallaxTest/Content";
 import Nav from "./components/Nav/Nav.js";
 import NavTwo from "./components/NavTwo/NavTwo.js";
 import Landing from "./components/Landing/Landing.js";
+import DisplayCase from "./components/DisplayCase/DisplayCase.js";
+import ItemTool from "./components/DisplayCase/ItemTool.js";
 import "./App.css";
 
 class App extends Component {
@@ -45,10 +47,17 @@ class App extends Component {
       <div>
         {/* <Nav /> */}
         <Landing />
-        <button onClick={this.props.clickingEvent}>
+        {/* <button onClick={this.props.clickingEvent}>
           {this.props.tools.name}
-        </button>
+        </button> */}
         <NavTwo displaySelection={this.onToDisplay} />
+        <DisplayCase>
+          {this.props.toDisplay === "Toolkit"
+            ? this.props.tools.map(tool => {
+                return <ItemTool name={tool.name} src={tool.imgSrc} />;
+              })
+            : console.log(this.props.toDisplay)}
+        </DisplayCase>
       </div>
     );
   }
