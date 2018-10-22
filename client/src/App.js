@@ -47,17 +47,28 @@ class App extends Component {
       <div>
         {/* <Nav /> */}
         <Landing />
-        {/* <button onClick={this.props.clickingEvent}>
-          {this.props.tools.name}
-        </button> */}
         <NavTwo displaySelection={this.onToDisplay} />
-        <DisplayCase>
-          {this.props.toDisplay === "Toolkit"
-            ? this.props.tools.map(tool => {
+        {this.props.toDisplay === "Toolkit" ? (
+          <div>
+            <DisplayCase name="Front End">
+              {this.props.toolsFront.map(tool => {
                 return <ItemTool name={tool.name} src={tool.imgSrc} />;
-              })
-            : console.log(this.props.toDisplay)}
-        </DisplayCase>
+              })}
+            </DisplayCase>
+            <DisplayCase name="Back End">
+              {this.props.toolsBack.map(tool => {
+                return <ItemTool name={tool.name} src={tool.imgSrc} />;
+              })}
+            </DisplayCase>
+            <DisplayCase name="Other Tools">
+              {this.props.toolsOther.map(tool => {
+                return <ItemTool name={tool.name} src={tool.imgSrc} />;
+              })}
+            </DisplayCase>
+          </div>
+        ) : null
+        // this.props.toDisplay === "Work"
+        }
       </div>
     );
   }
@@ -67,7 +78,9 @@ const mapStateToProps = (state, props) => {
   // products: state.products,
   // user: state.user.user,
   return {
-    tools: state.tools,
+    toolsFront: state.toolsFront,
+    toolsBack: state.toolsBack,
+    toolsOther: state.toolsOther,
     toDisplay: state.toDisplay,
   };
   // userPlusProps: `${state.user} ${props.testProp}`,

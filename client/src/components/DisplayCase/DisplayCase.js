@@ -3,7 +3,12 @@ import React from "react";
 import "./DisplayCase.css";
 
 function DisplayCase(props) {
-  return <div className="dc-container">{props.children}</div>;
+  return (
+    <div className="dc-container">
+      <div className="dc-title">{props.name}</div>
+      <div className="dc-item-container">{props.children}</div>
+    </div>
+  );
 }
 
 // function mapStateToProps(state) {
