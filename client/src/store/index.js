@@ -73,6 +73,13 @@ const initialState = {
         "https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png",
     },
   ],
+  work: [
+    {
+      title: "Placeholder",
+      imgSrc: "placeholder",
+      desc: "lorem ipsum etc etc...",
+    },
+  ],
 };
 
 const reducer = (state = initialState, { type, payload }) => {

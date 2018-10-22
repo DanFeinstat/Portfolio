@@ -11,6 +11,7 @@ import NavTwo from "./components/NavTwo/NavTwo.js";
 import Landing from "./components/Landing/Landing.js";
 import DisplayCase from "./components/DisplayCase/DisplayCase.js";
 import ItemTool from "./components/DisplayCase/ItemTool.js";
+import ItemWork from "./components/DisplayCase/ItemWork.js";
 import "./App.css";
 
 class App extends Component {
@@ -66,9 +67,21 @@ class App extends Component {
               })}
             </DisplayCase>
           </div>
-        ) : null
-        // this.props.toDisplay === "Work"
-        }
+        ) : this.props.toDisplay === "Work" ? (
+          <div>
+            <DisplayCase name="Work">
+              {this.props.work.map(work => {
+                return (
+                  <ItemWork
+                    title={work.title}
+                    src={work.imgSrc}
+                    desc={work.desc}
+                  />
+                );
+              })}
+            </DisplayCase>
+          </div>
+        ) : null}
       </div>
     );
   }
@@ -82,6 +95,7 @@ const mapStateToProps = (state, props) => {
     toolsBack: state.toolsBack,
     toolsOther: state.toolsOther,
     toDisplay: state.toDisplay,
+    work: state.work,
   };
   // userPlusProps: `${state.user} ${props.testProp}`,
 };

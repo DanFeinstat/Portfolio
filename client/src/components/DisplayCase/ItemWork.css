@@ -1,0 +1,36 @@
+.item-work-container {
+  width: 350px;
+  height: 200px;
+  background-color: red;
+  margin: 5px;
+}
+
+.item-work-img {
+  width: 175px;
+  height: 200px;
+  float: left;
+}
+
+.item-work-desc-container {
+  width: 175px;
+  height: 200px;
+  float: right;
+}
+
+.item-work-title {
+  width: 175px;
+  text-align: center;
+}
+
+/* 
+.item-work-img {
+  width: 200px;
+    height: 200px;
+  float: left;
+}
+
+.item-work-desc-container {
+  width: 200px;
+    height: 200px;
+  float: right;
+} */
