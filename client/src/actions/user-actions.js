@@ -16,6 +16,15 @@ export function toDisplay(targetName) {
   };
 }
 
+export const WINDOW_RESIZE = "WINDOW_RESIZE";
+
+export function handleWindowResize() {
+  return {
+    type: WINDOW_RESIZE,
+    payload: { width: window.innerWidth },
+  };
+}
+
 export const GET_TOOLS = "tools:getTools";
 
 export function getTools() {

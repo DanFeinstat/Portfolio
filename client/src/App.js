@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { updateUser, SELECT_DISPLAY, toDisplay } from "./actions/user-actions";
+import {
+  updateUser,
+  SELECT_DISPLAY,
+  toDisplay,
+  handleWindowResize,
+} from "./actions/user-actions";
 import store from "./store/";
 //components
 import Background from "./components/parallaxTest/Background";
@@ -30,9 +35,19 @@ class App extends Component {
   //   // this.props.onGetTools();
   //   console.log("stuff");
   // }
+
   componentDidMount() {
+    window.addEventListener("resize", this.handleWindowSizeChange);
     console.log(store);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleWindowSizeChange);
+  }
+
+  handleWindowSizeChange = () => {
+    this.props.onWindowSizeChange();
+  };
 
   clickingEvent = e => {
     this.props.clickingEvent();
@@ -48,20 +63,23 @@ class App extends Component {
       <div>
         {/* <Nav /> */}
         <Landing />
-        <NavTwo displaySelection={this.onToDisplay} />
+        <NavTwo
+          displaySelection={this.onToDisplay}
+          selected={this.props.toDisplay}
+        />
         {this.props.toDisplay === "Toolkit" ? (
           <div>
-            <DisplayCase name="Front End">
+            <DisplayCase name="Front End" toDisplay={this.props.toDisplay}>
               {this.props.toolsFront.map(tool => {
                 return <ItemTool name={tool.name} src={tool.imgSrc} />;
               })}
             </DisplayCase>
-            <DisplayCase name="Back End">
+            <DisplayCase name="Back End" toDisplay={this.props.toDisplay}>
               {this.props.toolsBack.map(tool => {
                 return <ItemTool name={tool.name} src={tool.imgSrc} />;
               })}
             </DisplayCase>
-            <DisplayCase name="Other Tools">
+            <DisplayCase name="Other Tools" toDisplay={this.props.toDisplay}>
               {this.props.toolsOther.map(tool => {
                 return <ItemTool name={tool.name} src={tool.imgSrc} />;
               })}
@@ -69,13 +87,18 @@ class App extends Component {
           </div>
         ) : this.props.toDisplay === "Work" ? (
           <div>
-            <DisplayCase name="Work">
-              {this.props.work.map(work => {
+            <DisplayCase name="Work" toDisplay={this.props.toDisplay}>
+              {this.props.work.map((work, index) => {
                 return (
                   <ItemWork
+                    key={index}
                     title={work.title}
                     src={work.imgSrc}
+                    static={work.staticSrc}
                     desc={work.desc}
+                    demo={work.demo}
+                    code={work.code}
+                    // image={work.staticSrc}
                   />
                 );
               })}
@@ -96,12 +119,14 @@ const mapStateToProps = (state, props) => {
     toolsOther: state.toolsOther,
     toDisplay: state.toDisplay,
     work: state.work,
+    width: state.width,
   };
   // userPlusProps: `${state.user} ${props.testProp}`,
 };
 
 const mapDispatchToProps = {
   onToDisplay: toDisplay,
+  onWindowSizeChange: handleWindowResize,
 };
 
 // const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {

@@ -6,7 +6,9 @@ const DisplayCase = props => {
   return (
     <div className="dc-container">
       <div className="dc-title">{props.name}</div>
-      <div className="dc-item-container">{props.children}</div>
+      <div className={"dc-item-container-" + props.toDisplay}>
+        {props.children}
+      </div>
     </div>
   );
 };

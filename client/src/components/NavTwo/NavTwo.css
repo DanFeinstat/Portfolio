@@ -38,3 +38,7 @@
   background-color: rgb(183, 37, 40, 0.4);
   outline: 0;
 }
+
+.selected {
+  background-color: rgb(183, 37, 40, 0.4);
+}

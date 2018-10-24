@@ -1,8 +1,11 @@
 import { createStore } from "redux";
-import { SELECT_DISPLAY, toDisplay } from "../actions/user-actions";
+import { SELECT_DISPLAY, WINDOW_RESIZE } from "../actions/user-actions";
+import hambreThumbnail from "../images/hambreThumbnail.png";
+import delta32Thumbnail from "../images/delta32Thumbnail.png";
 
 const initialState = {
-  toDisplay: "",
+  width: window.innerWidth,
+  toDisplay: "Work",
   displayType: "icon",
   toolsOther: [
     {
@@ -75,9 +78,20 @@ const initialState = {
   ],
   work: [
     {
-      title: "Placeholder",
-      imgSrc: "placeholder",
+      title: "Hambre",
+      staticSrc: hambreThumbnail,
+      imgSrc: "https://media.giphy.com/media/23g6oI0pZrcqj8a3vH/giphy.gif",
       desc: "lorem ipsum etc etc...",
+      demo: "https://hambre-sacramento.herokuapp.com/",
+      code: "https://github.com/DanFeinstat/hambre",
+    },
+    {
+      title: "Delta32",
+      staticSrc: delta32Thumbnail,
+      imgSrc: "https://media.giphy.com/media/13QDrZH1eBKyiWEp9z/giphy.gif",
+      desc: "lorem ipsum etc etc...",
+      demo: "https://delta32.herokuapp.com/",
+      code: "https://github.com/DanFeinstat/delta32",
     },
   ],
 };
@@ -88,6 +102,8 @@ const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case SELECT_DISPLAY:
       return { ...state, toDisplay: payload.toDisplay };
+    case WINDOW_RESIZE:
+      return { ...state, width: payload.width };
   }
 
   return state;

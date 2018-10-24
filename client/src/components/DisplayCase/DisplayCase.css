@@ -3,17 +3,24 @@
   background-color: gainsboro;
 }
 
-.dc-item-container {
+.dc-item-container-Toolkit {
   width: 100vw;
   min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.dc-item-container-Work {
+  width: 100vw;
+  min-height: 70px;
+  padding-bottom: 40px;
+  overflow: auto;
+}
 
 .dc-title {
   width: 100%;
-  height: 24px;
+  height: 64px;
+  font-size: 32px;
   display: flex;
   align-items: center;
   justify-content: center;

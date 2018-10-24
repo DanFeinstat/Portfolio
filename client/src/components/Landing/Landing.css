@@ -2,6 +2,9 @@
   width: 100vw;
   height: 65vh;
   background-color: grey;
+  /* background-image: url("../../images/softwareEngineer.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow: auto;
 }
 
