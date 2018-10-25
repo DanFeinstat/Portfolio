@@ -3,7 +3,7 @@ import "./ToolList.css";
 
 const ToolList = props => {
   return (
-    <div className="tl">
+    <div className="tool-list">
       <ul>{props.children}</ul>
     </div>
   );

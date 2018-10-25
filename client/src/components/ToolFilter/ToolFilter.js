@@ -26,11 +26,11 @@ const ToolFilter = props => {
         )
       ) : (
         <div className="tf-container">
-          <button className="tf-btn" onClick={props.showIcons}>
-            Show Me Icons
-          </button>
           <button className="tf-btn" onClick={props.showListsAndIcons}>
             Show Me Lists and Icons
+          </button>
+          <button className="tf-btn" onClick={props.showIcons}>
+            Show Me Icons
           </button>
         </div>
       )}

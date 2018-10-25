@@ -1,14 +1,15 @@
 .dc-container {
   width: 100vw;
-  background-color: gainsboro;
+  background-color: rgb(225, 226, 225);
 }
 
 .dc-item-container-Toolkit {
   width: 100vw;
   min-height: 70px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  overflow: auto;
 }
 .dc-item-container-Work {
   width: 100vw;

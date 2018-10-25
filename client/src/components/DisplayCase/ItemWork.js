@@ -30,24 +30,26 @@ class ItemWork extends Component {
     const isMobile = this.props.width <= 667;
     if (isMobile) {
       return (
-        <div className="card card--big">
-          <img
-            className="card__image"
-            src={this.props.static}
-            alt={this.props.title}
-            onClick={this.toggleGif}
-          />
-          <h2 className="card__title">
-            <span className="card__title-span">{this.props.title}</span>
-          </h2>
-          <p className="card__text">{this.props.desc}</p>
-          <div className="card__action-bar">
-            <button className="card__button" onClick={this.goToDemo}>
-              DEMO
-            </button>
-            <button className="card__button right" onClick={this.goToCode}>
-              SEE THE CODE
-            </button>
+        <div className="card-container-full">
+          <div className="card card--big">
+            <img
+              className="card__image"
+              src={this.props.static}
+              alt={this.props.title}
+              onClick={this.toggleGif}
+            />
+            <h2 className="card__title">
+              <span className="card__title-span">{this.props.title}</span>
+            </h2>
+            <p className="card__text">{this.props.desc}</p>
+            <div className="card__action-bar">
+              <button className="card__button" onClick={this.goToDemo}>
+                DEMO
+              </button>
+              <button className="card__button right" onClick={this.goToCode}>
+                SEE THE CODE
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -55,9 +57,9 @@ class ItemWork extends Component {
       return (
         <div
           className={
-            window.innerWidth < 800
+            this.props.width < 1000
               ? "card-container-full"
-              : window.innerWidth > 1450
+              : this.props.width > 1450
                 ? "card-container-third"
                 : "card-container-half"
           }

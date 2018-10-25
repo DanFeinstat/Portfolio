@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
 }
 
 .App-logo {
@@ -22,7 +24,19 @@
   font-size: large;
 }
 
+.t-icons-container {
+  width: 100vw;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

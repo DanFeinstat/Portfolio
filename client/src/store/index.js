@@ -8,6 +8,7 @@ import {
 } from "../actions/user-actions";
 import hambreThumbnail from "../images/hambreThumbnail.png";
 import delta32Thumbnail from "../images/delta32Thumbnail.png";
+import artPortThumbnail from "../images/artPortThumbnail.png";
 
 const initialState = {
   width: window.innerWidth,
@@ -84,6 +85,14 @@ const initialState = {
     },
   ],
   work: [
+    {
+      title: "Art Portfolio",
+      staticSrc: artPortThumbnail,
+      imgSrc: "https://media.giphy.com/media/ulaOGkVeOtz8oz7l6x/giphy.gif",
+      desc: "lorem ipsum etc etc...",
+      demo: "https://thawing-anchorage-87258.herokuapp.com/",
+      code: "https://github.com/DanFeinstat/Artist-Portfolio",
+    },
     {
       title: "Hambre",
       staticSrc: hambreThumbnail,

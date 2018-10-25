@@ -1,6 +1,7 @@
 .tf {
   height: 10vh;
   width: 100vw;
+  background-color: #4a6572;
 }
 
 .tf-container {
@@ -17,8 +18,8 @@
   display: block;
   width: auto;
   border: none;
-  background-color: rgb(193, 208, 216, 0.4);
-  border-radius: 10px;
+  background-color: whitesmoke;
+  border-radius: 2px;
   padding-left: 0.5em;
   padding-right: 0.5em;
   padding-top: 0.3em;
@@ -28,13 +29,14 @@
   margin-top: 2vh;
   margin-bottom: 1vh;
   cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
 .tf-btn:hover {
-  background-color: rgb(193, 208, 216, 0.7);
+  background-color: white;
 }
 
-.tf-btn:focus {
+.tf-btn:active {
   background-color: rgb(183, 37, 40, 0.4);
   outline: 0;
 }
