@@ -2,6 +2,7 @@
   height: 10vh;
   width: 100vw;
   background-color: #4a6572;
+  overflow-y: auto;
 }
 
 .tf-container {
@@ -26,8 +27,8 @@
   padding-bottom: 0.3em;
   margin-left: 0.5em;
   margin-right: 0.5em;
-  margin-top: 2vh;
-  margin-bottom: 1vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }

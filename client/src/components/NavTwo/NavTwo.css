@@ -12,7 +12,6 @@
 }
 
 .nav2-btn {
-  /* font-weight: bold; */
   font-size: 120%;
   display: block;
   width: auto;
@@ -35,12 +34,10 @@
 }
 
 .nav2-btn:focus {
-  /* background-color: rgb(183, 37, 40, 0.4); */
   background-color: rgb(249, 170, 51);
   outline: 0;
 }
 
 .selected {
   background-color: rgb(249, 170, 51);
-  /* background-color: rgba(245, 138, 140, 0.4); */
 }

@@ -97,7 +97,8 @@ const initialState = {
       title: "Hambre",
       staticSrc: hambreThumbnail,
       imgSrc: "https://media.giphy.com/media/23g6oI0pZrcqj8a3vH/giphy.gif",
-      desc: "lorem ipsum etc etc...",
+      desc:
+        "Hambre is a food truck tracking web app.  Built on the MERN stack and leveraging the Google Maps API and websocket technologies for realtime updates and customer/truck owner interaction.",
       demo: "https://hambre-sacramento.herokuapp.com/",
       code: "https://github.com/DanFeinstat/hambre",
     },
