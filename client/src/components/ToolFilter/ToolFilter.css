@@ -1,0 +1,44 @@
+.tf {
+  height: 10vh;
+  width: 100vw;
+}
+
+.tf-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.tf-btn {
+  /* font-weight: bold; */
+  font-size: 110%;
+  display: block;
+  width: auto;
+  border: none;
+  background-color: rgb(193, 208, 216, 0.4);
+  border-radius: 10px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  cursor: pointer;
+}
+
+.tf-btn:hover {
+  background-color: rgb(193, 208, 216, 0.7);
+}
+
+.tf-btn:focus {
+  background-color: rgb(183, 37, 40, 0.4);
+  outline: 0;
+}
+
+.tf-selected {
+  background-color: rgb(183, 37, 40, 0.4);
+}

@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import {
-  updateUser,
-  SELECT_DISPLAY,
   toDisplay,
   handleWindowResize,
+  displayIcons,
+  displayLists,
+  displayListsAndIcons,
 } from "./actions/user-actions";
 import store from "./store/";
 //components
@@ -13,9 +14,12 @@ import Background from "./components/parallaxTest/Background";
 import Content from "./components/parallaxTest/Content";
 import Nav from "./components/Nav/Nav.js";
 import NavTwo from "./components/NavTwo/NavTwo.js";
+import ToolFilter from "./components/ToolFilter/ToolFilter.js";
 import Landing from "./components/Landing/Landing.js";
 import DisplayCase from "./components/DisplayCase/DisplayCase.js";
 import ItemTool from "./components/DisplayCase/ItemTool.js";
+import ToolList from "./components/DisplayCase/ToolList";
+import ToolListItem from "./components/DisplayCase/ToolListItem";
 import ItemWork from "./components/DisplayCase/ItemWork.js";
 import "./App.css";
 
@@ -58,6 +62,18 @@ class App extends Component {
     this.props.onToDisplay(e.target.textContent);
   };
 
+  toDisplayIcons = e => {
+    this.props.toDisplayIcons();
+  };
+
+  toDisplayLists = e => {
+    this.props.toDisplayLists();
+  };
+
+  toDisplayListsAndIcons = e => {
+    this.props.toDisplayListsAndIcons();
+  };
+
   render() {
     return (
       <div>
@@ -69,10 +85,40 @@ class App extends Component {
         />
         {this.props.toDisplay === "Toolkit" ? (
           <div>
+            <ToolFilter
+              icons={this.props.icons}
+              lists={this.props.lists}
+              listsAndIcons={this.props.listsAndIcons}
+              showIcons={this.toDisplayIcons}
+              showLists={this.toDisplayLists}
+              showListsAndIcons={this.toDisplayListsAndIcons}
+            />
             <DisplayCase name="Front End" toDisplay={this.props.toDisplay}>
-              {this.props.toolsFront.map(tool => {
-                return <ItemTool name={tool.name} src={tool.imgSrc} />;
-              })}
+              {this.props.icons ? (
+                this.props.list ? (
+                  <div>
+                    {this.props.toolsFront.map(tool => {
+                      return <ItemTool name={tool.name} src={tool.imgSrc} />;
+                    })}
+                    <ToolList>
+                      {this.props.toolsFront.map(tool => {
+                        return <ToolListItem name={tool.name} />;
+                      })}
+                    </ToolList>
+                  </div>
+                ) : (
+                  this.props.toolsFront.map(tool => {
+                    return <ItemTool name={tool.name} src={tool.imgSrc} />;
+                  })
+                )
+              ) : (
+                <ToolList>
+                  {this.props.toolsFront.map(tool => {
+                    return <ToolListItem name={tool.name} />;
+                  })}
+                  ;
+                </ToolList>
+              )}
             </DisplayCase>
             <DisplayCase name="Back End" toDisplay={this.props.toDisplay}>
               {this.props.toolsBack.map(tool => {
@@ -120,6 +166,9 @@ const mapStateToProps = (state, props) => {
     toDisplay: state.toDisplay,
     work: state.work,
     width: state.width,
+    icons: state.icons,
+    lists: state.lists,
+    listsAndIcons: state.listsAndIcons,
   };
   // userPlusProps: `${state.user} ${props.testProp}`,
 };
@@ -127,6 +176,9 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = {
   onToDisplay: toDisplay,
   onWindowSizeChange: handleWindowResize,
+  toDisplayIcons: displayIcons,
+  toDisplayLists: displayLists,
+  toDisplayListsAndIcons: displayListsAndIcons,
 };
 
 // const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {

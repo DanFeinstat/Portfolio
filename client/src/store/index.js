@@ -1,12 +1,19 @@
 import { createStore } from "redux";
-import { SELECT_DISPLAY, WINDOW_RESIZE } from "../actions/user-actions";
+import {
+  SELECT_DISPLAY,
+  WINDOW_RESIZE,
+  GET_ICONS,
+  GET_LISTS,
+  GET_LISTSANDICONS,
+} from "../actions/user-actions";
 import hambreThumbnail from "../images/hambreThumbnail.png";
 import delta32Thumbnail from "../images/delta32Thumbnail.png";
 
 const initialState = {
   width: window.innerWidth,
   toDisplay: "Work",
-  displayType: "icon",
+  icons: true,
+  lists: false,
   toolsOther: [
     {
       name: "Git",
@@ -104,9 +111,27 @@ const reducer = (state = initialState, { type, payload }) => {
       return { ...state, toDisplay: payload.toDisplay };
     case WINDOW_RESIZE:
       return { ...state, width: payload.width };
+    case GET_ICONS:
+      return {
+        ...state,
+        icons: payload.icons,
+        lists: payload.lists,
+      };
+    case GET_LISTS:
+      return {
+        ...state,
+        icons: payload.icons,
+        lists: payload.lists,
+      };
+    case GET_LISTSANDICONS:
+      return {
+        ...state,
+        icons: payload.icons,
+        lists: payload.lists,
+      };
+    default:
+      return state;
   }
-
-  return state;
 };
 
 const store = createStore(

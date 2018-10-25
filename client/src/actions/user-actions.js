@@ -1,12 +1,3 @@
-export const UPDATE_USER = "users:updateUser";
-
-export function updateUser(newUser) {
-  return {
-    type: UPDATE_USER,
-    payload: { user: newUser },
-  };
-}
-
 export const SELECT_DISPLAY = "SELECT_DISPLAY";
 
 export function toDisplay(targetName) {
@@ -22,6 +13,42 @@ export function handleWindowResize() {
   return {
     type: WINDOW_RESIZE,
     payload: { width: window.innerWidth },
+  };
+}
+
+export const GET_ICONS = "GET_ICONS";
+
+export function displayIcons() {
+  return {
+    type: GET_ICONS,
+    payload: {
+      icons: true,
+      lists: false,
+    },
+  };
+}
+
+export const GET_LISTS = "GET_LISTS";
+
+export function displayLists() {
+  return {
+    type: GET_LISTS,
+    payload: {
+      icons: false,
+      lists: true,
+    },
+  };
+}
+
+export const GET_LISTSANDICONS = "GET_LISTSANDICONS";
+
+export function displayListsAndIcons() {
+  return {
+    type: GET_LISTSANDICONS,
+    payload: {
+      icons: true,
+      lists: true,
+    },
   };
 }
 
