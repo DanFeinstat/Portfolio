@@ -89,7 +89,8 @@ const initialState = {
       title: "Art Portfolio",
       staticSrc: artPortThumbnail,
       imgSrc: "https://media.giphy.com/media/ulaOGkVeOtz8oz7l6x/giphy.gif",
-      desc: "lorem ipsum etc etc...",
+      desc:
+        "Art portfolio built in React and Node with a mobile-first responsive design.  Leverages nodeMailer to allow contact and comments while protecting the owner's contact data.",
       demo: "https://thawing-anchorage-87258.herokuapp.com/",
       code: "https://github.com/DanFeinstat/Artist-Portfolio",
     },
@@ -98,7 +99,7 @@ const initialState = {
       staticSrc: hambreThumbnail,
       imgSrc: "https://media.giphy.com/media/23g6oI0pZrcqj8a3vH/giphy.gif",
       desc:
-        "Hambre is a food truck tracking web app.  Built on the MERN stack and leveraging the Google Maps API and websocket technologies for realtime updates and customer/truck owner interaction.",
+        "Hambre is a food truck tracking web app.  Built on the MERN stack, this app leverages the Google Maps API and websockets for realtime updates and communication.",
       demo: "https://hambre-sacramento.herokuapp.com/",
       code: "https://github.com/DanFeinstat/hambre",
     },
@@ -106,7 +107,8 @@ const initialState = {
       title: "Delta32",
       staticSrc: delta32Thumbnail,
       imgSrc: "https://media.giphy.com/media/13QDrZH1eBKyiWEp9z/giphy.gif",
-      desc: "lorem ipsum etc etc...",
+      desc:
+        "Delta32 is a hub for creating, storing and viewing health and fitness related videos.  Built with Jquery, Handlebars, Node, Express, SQL and Sequelize while leveraging the Ziggio API.",
       demo: "https://delta32.herokuapp.com/",
       code: "https://github.com/DanFeinstat/delta32",
     },

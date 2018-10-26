@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { bindActionCreators } from "redux";
+// import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import {
   toDisplay,
@@ -10,9 +10,9 @@ import {
 } from "./actions/user-actions";
 import store from "./store/";
 //components
-import Background from "./components/parallaxTest/Background";
-import Content from "./components/parallaxTest/Content";
-import Nav from "./components/Nav/Nav.js";
+// import Background from "./components/parallaxTest/Background";
+// import Content from "./components/parallaxTest/Content";
+// import Nav from "./components/Nav/Nav.js";
 import NavTwo from "./components/NavTwo/NavTwo.js";
 import ToolFilter from "./components/ToolFilter/ToolFilter.js";
 import Landing from "./components/Landing/Landing.js";
@@ -27,18 +27,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.clickingEvent = this.clickingEvent.bind(this);
-    // this.onUpdateUser = this.onUpdateUser.bind(this);
-    // this.onGetTools = this.onGetTools.bind(this);
   }
-
-  // onUpdateUser(event) {
-  //   this.props.onUpdateUser("Tom");
-  // }
-
-  // onGetTools(event) {
-  //   // this.props.onGetTools();
-  //   console.log("stuff");
-  // }
 
   componentDidMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
@@ -94,16 +83,34 @@ class App extends Component {
             />
             <DisplayCase name="Front End" toDisplay={this.props.toDisplay}>
               {this.props.icons ? (
-                <div className="t-icons-container">
-                  {this.props.toolsFront.map(tool => {
-                    return <ItemTool name={tool.name} src={tool.imgSrc} />;
-                  })}
-                </div>
+                this.props.list ? (
+                  <ToolList>
+                    {this.props.toolsFront.map((tool, index) => {
+                      return (
+                        <ToolListItem key={index} name={tool.name}>
+                          <ItemTool src={tool.src} name={tool.name} />
+                        </ToolListItem>
+                      );
+                    })}
+                  </ToolList>
+                ) : (
+                  <div className="t-icons-container">
+                    {this.props.toolsFront.map((tool, index) => {
+                      return (
+                        <ItemTool
+                          key={index}
+                          name={tool.name}
+                          src={tool.imgSrc}
+                        />
+                      );
+                    })}
+                  </div>
+                )
               ) : null}
               {this.props.lists ? (
                 <ToolList>
-                  {this.props.toolsFront.map(tool => {
-                    return <ToolListItem name={tool.name} />;
+                  {this.props.toolsFront.map((tool, index) => {
+                    return <ToolListItem key={index} name={tool.name} />;
                   })}
                 </ToolList>
               ) : null}
@@ -111,15 +118,21 @@ class App extends Component {
             <DisplayCase name="Back End" toDisplay={this.props.toDisplay}>
               {this.props.icons ? (
                 <div className="t-icons-container">
-                  {this.props.toolsBack.map(tool => {
-                    return <ItemTool name={tool.name} src={tool.imgSrc} />;
+                  {this.props.toolsBack.map((tool, index) => {
+                    return (
+                      <ItemTool
+                        key={index}
+                        name={tool.name}
+                        src={tool.imgSrc}
+                      />
+                    );
                   })}
                 </div>
               ) : null}
               {this.props.lists ? (
                 <ToolList>
-                  {this.props.toolsBack.map(tool => {
-                    return <ToolListItem name={tool.name} />;
+                  {this.props.toolsBack.map((tool, index) => {
+                    return <ToolListItem key={index} name={tool.name} />;
                   })}
                 </ToolList>
               ) : null}
@@ -127,15 +140,23 @@ class App extends Component {
             <DisplayCase name="Other Tools" toDisplay={this.props.toDisplay}>
               {this.props.icons ? (
                 <div className="t-icons-container">
-                  {this.props.toolsOther.map(tool => {
-                    return <ItemTool name={tool.name} src={tool.imgSrc} />;
+                  {this.props.toolsOther.map((tool, index) => {
+                    return (
+                      <ItemTool
+                        key={index}
+                        name={tool.name}
+                        src={tool.imgSrc}
+                      />
+                    );
                   })}
                 </div>
               ) : null}
               {this.props.lists ? (
                 <ToolList>
-                  {this.props.toolsOther.map(tool => {
-                    return <ToolListItem name={tool.name} />;
+                  {this.props.toolsOther.map((tool, index) => {
+                    return (
+                      <ToolListItem key={index} key={index} name={tool.name} />
+                    );
                   })}
                 </ToolList>
               ) : null}
@@ -160,6 +181,16 @@ class App extends Component {
               })}
             </DisplayCase>
           </div>
+        ) : this.props.toDisplay === "Contact" ? (
+          <DisplayCase
+            name={this.props.toDisplay}
+            toDisplay={this.props.toDisplay}
+          />
+        ) : this.props.toDisplay === "About" ? (
+          <DisplayCase
+            name={this.props.toDisplay}
+            toDisplay={this.props.toDisplay}
+          />
         ) : null}
       </div>
     );

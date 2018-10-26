@@ -207,6 +207,7 @@
   }
   .card--big .card__text {
     top: 235px;
+    margin-top: 8px;
   }
 
   .card-container-full {
