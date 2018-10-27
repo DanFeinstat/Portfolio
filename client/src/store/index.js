@@ -116,7 +116,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, { type, payload }) => {
-  console.log("reducer running", type, payload);
+  // console.log("reducer running", type, payload);
 
   switch (type) {
     case SELECT_DISPLAY:

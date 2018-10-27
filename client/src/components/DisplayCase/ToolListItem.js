@@ -1,14 +1,15 @@
 import React from "react";
-// import ItemTool from "../DisplayCase/ItemTool.js";
 import "./ToolListItem.css";
 
 const ToolListItem = props => {
   return (
     <li className="tl-Item">
-      <span>
-        {props.children}
-        {props.name}
-      </span>
+      {props.icons ? (
+        <span>
+          <img className="tl-tool-icon" src={props.src} alt={props.name} />
+        </span>
+      ) : null}
+      {props.name}
     </li>
   );
 };

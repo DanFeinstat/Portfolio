@@ -1,0 +1,19 @@
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-button-container {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (min-width: 668px) {
+  .contact-button-container {
+    margin: 0px;
+  }
+
+  .contact-button-container:hover {
+    cursor: pointer;
+  }
+}

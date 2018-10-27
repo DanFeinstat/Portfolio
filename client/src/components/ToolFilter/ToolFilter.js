@@ -8,29 +8,29 @@ const ToolFilter = props => {
         props.lists ? (
           <div className="tf-container">
             <button className="tf-btn" onClick={props.showLists}>
-              Show Me Lists
+              Show Lists
             </button>
             <button className="tf-btn" onClick={props.showIcons}>
-              Show Me Icons
+              Show Icons
             </button>
           </div>
         ) : (
           <div className="tf-container">
             <button className="tf-btn" onClick={props.showLists}>
-              Show Me Lists
+              Show Lists
             </button>
             <button className="tf-btn" onClick={props.showListsAndIcons}>
-              Show Me Lists and Icons
+              Show Lists + Icons
             </button>
           </div>
         )
       ) : (
         <div className="tf-container">
           <button className="tf-btn" onClick={props.showListsAndIcons}>
-            Show Me Lists and Icons
+            Show Lists + Icons
           </button>
           <button className="tf-btn" onClick={props.showIcons}>
-            Show Me Icons
+            Show Icons
           </button>
         </div>
       )}
