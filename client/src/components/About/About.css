@@ -1,6 +1,7 @@
 .about-container {
   width: 350px;
   background-color: snow;
+  height: auto;
 }
 
 .about-image-container {
@@ -40,8 +41,8 @@
 @media (min-width: 668px) {
   .about-text {
     margin-left: 120px;
-    width: auto;
-    margin-right: 0px;
+    width: 310px;
+    margin-right: 20px;
     text-align: left;
   }
   .about-container {

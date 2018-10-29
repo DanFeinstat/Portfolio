@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import {
   toDisplay,
@@ -10,9 +9,6 @@ import {
 } from "./actions/user-actions";
 import store from "./store/";
 //components
-// import Background from "./components/parallaxTest/Background";
-// import Content from "./components/parallaxTest/Content";
-// import Nav from "./components/Nav/Nav.js";
 import NavTwo from "./components/NavTwo/NavTwo.js";
 import ToolFilter from "./components/ToolFilter/ToolFilter.js";
 import Landing from "./components/Landing/Landing.js";
@@ -249,7 +245,6 @@ class App extends Component {
                     desc={work.desc}
                     demo={work.demo}
                     code={work.code}
-                    // image={work.staticSrc}
                   />
                 );
               })}
