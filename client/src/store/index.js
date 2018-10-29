@@ -5,7 +5,7 @@ import {
   GET_ICONS,
   GET_LISTS,
   GET_LISTSANDICONS,
-} from "../actions/user-actions";
+} from "../actions/actions";
 import hambreThumbnail from "../images/hambreThumbnail.png";
 import delta32Thumbnail from "../images/delta32Thumbnail.png";
 import artPortThumbnail from "../images/artPortThumbnail.png";
@@ -88,7 +88,7 @@ const initialState = {
     {
       title: "Art Portfolio",
       staticSrc: artPortThumbnail,
-      imgSrc: "https://media.giphy.com/media/ulaOGkVeOtz8oz7l6x/giphy.gif",
+      imgSrc: "https://media.giphy.com/media/1nawH619mxLyrNGHYO/giphy.gif",
       desc:
         "Art portfolio built in React and Node with a mobile-first responsive design.  Leverages nodeMailer to allow contact and comments while protecting the owner's contact data.",
       demo: "https://thawing-anchorage-87258.herokuapp.com/",

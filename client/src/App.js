@@ -6,7 +6,7 @@ import {
   displayIcons,
   displayLists,
   displayListsAndIcons,
-} from "./actions/user-actions";
+} from "./actions/actions";
 import store from "./store/";
 //components
 import NavTwo from "./components/NavTwo/NavTwo.js";
