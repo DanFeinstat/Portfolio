@@ -13,7 +13,7 @@
 }
 
 .nav2-btn {
-  font-size: 120%;
+  font-size: 100%;
   display: block;
   width: auto;
   border: none;
@@ -41,4 +41,16 @@
 
 .selected {
   background-color: rgb(249, 170, 51);
+}
+
+@media screen and (min-width: 415px) and (max-width: 813px) {
+  .nav2 {
+    height: 18vh;
+  }
+}
+
+@media screen and (min-width: 415px) {
+  .nav2-btn {
+    font-size: 120%;
+  }
 }
