@@ -7,18 +7,21 @@
   width: 100vw;
   min-height: 70px;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .dc-item-container-Work {
   width: 100vw;
   min-height: 70px;
   padding-bottom: 40px;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .dc-item-container-Contact {
   width: 100vw;
   min-height: 70px;
   padding-bottom: 40px;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dc-item-container-About {
@@ -29,6 +32,7 @@
   justify-content: center;
   align-items: center;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dc-title {
