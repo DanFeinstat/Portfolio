@@ -2,7 +2,7 @@
   will-change: transform;
   margin: 8px;
   margin-top: 40px;
-  /* position: relative; */
+  position: relative;
   border-radius: 2px;
   overflow: hidden;
   background-color: #fafafa;
@@ -13,6 +13,20 @@
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
   overflow-y: auto;
 }
+/* .card {
+display: flex;
+flex-direction: column;
+font-size: $card-font-size;
+font-weight: 400;
+min-height: 35%;
+overflow: hidden;
+width: 344pc;
+z-index: $card-z-index;
+position: relative;
+background: $card-background-color;
+border-radius: 2px;
+box-sizing: border-box;
+} */
 /* .card:hover {
   cursor: pointer;
 } */
