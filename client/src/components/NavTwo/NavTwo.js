@@ -7,24 +7,20 @@ const Nav = props => {
       <div className="nav2-container">
         <button
           className={
-            props.selected === "Toolkit" ? "nav2-btn selected" : "nav2-btn"
-          }
-          onClick={props.displaySelection}
-        >
-          Toolkit
-        </button>
-        <button
-          className={
-            props.selected === "Work"
-              ? "nav2-btn selected"
-              : // : props.selected === ""
-                //   ? "nav2-btn selected"
-                "nav2-btn"
+            props.selected === "Work" ? "nav2-btn selected" : "nav2-btn"
           }
           onClick={props.displaySelection}
           autoFocus={true}
         >
           Work
+        </button>
+        <button
+          className={
+            props.selected === "Toolkit" ? "nav2-btn selected" : "nav2-btn"
+          }
+          onClick={props.displaySelection}
+        >
+          Toolkit
         </button>
         <button
           className={
