@@ -30,7 +30,7 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
-    console.log(store);
+    // console.log(store);
   }
 
   componentWillUnmount() {
@@ -47,9 +47,7 @@ class App extends Component {
 
   onToDisplay = e => {
     if (e.target.textContent === "Contact") {
-      console.log(
-        "You can probably contact me on Tinder too if you swipe enough."
-      );
+      console.log("You can also email me directly at danfeinstat@gmail.com");
     } else if (e.target.textContent === "About") {
       console.log("Bonus about me: I'm a gemini.");
     } else if (e.target.textContent === "Work") {
@@ -57,7 +55,9 @@ class App extends Component {
         "Hover the images on the cards for gif mode.  Thanks for checking out my work!"
       );
     } else if (e.target.textContent === "Toolkit") {
-      console.log("");
+      console.log(
+        "If I had to pick one, I'd say I prefer front end to back end work, but I find both compelling."
+      );
     }
     this.props.onToDisplay(e.target.textContent);
   };

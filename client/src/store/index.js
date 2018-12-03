@@ -9,6 +9,7 @@ import {
 import hambreThumbnail from "../images/hambreThumbnail.png";
 import delta32Thumbnail from "../images/delta32Thumbnail.png";
 import artPortThumbnail from "../images/artPortThumbnail.png";
+import dndSpellThumbnail from "../images/dndSpellThumbnail.png";
 
 const initialState = {
   width: window.innerWidth,
@@ -38,7 +39,7 @@ const initialState = {
     {
       name: "Express.js",
       imgSrc:
-        "https://camo.githubusercontent.com/647e291a5fd52d50e01deb82f9392c462df148a6/687474703a2f2f617070732e6f63746f636f6e73756c74696e672e636f6d2f696d616765732f6578707265737349636f6e2e706e67",
+        "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png",
     },
     {
       name: "SQL",
@@ -85,6 +86,15 @@ const initialState = {
     },
   ],
   work: [
+    {
+      title: "5e Spellbook Builder",
+      staticSrc: dndSpellThumbnail,
+      imgSrc: "https://media.giphy.com/media/B1SGZpx6nl8O9swASY/giphy.gif",
+      desc:
+        "5e D&D tool for building and saving a spellbook.  Built on the MERN stack with mongoose middleware, the ui is a responsive, mobile-first layout.",
+      demo: "https://dnd-5e-spellbook-builder.herokuapp.com/",
+      code: "https://github.com/DanFeinstat/5e-Spellbook-Builder",
+    },
     {
       title: "Art Portfolio",
       staticSrc: artPortThumbnail,

@@ -19,8 +19,7 @@ const About = props => {
       )}
       <p className="about-text">
         I’m Dan Feinstat, a full stack engineer with a passion for translating
-        complex ideas into <b>intuitive</b>, <b>scalable</b> and highly{" "}
-        <b>performant</b> applications.
+        ideas into intuitive and performant applications.
       </p>
       <p className="about-text">Thanks for checking out my work!</p>
     </div>
