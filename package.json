@@ -12,6 +12,9 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "resolutions": {
+    "**/event-stream": "^4.0.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
