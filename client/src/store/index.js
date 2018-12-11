@@ -91,7 +91,7 @@ const initialState = {
       staticSrc: dndSpellThumbnail,
       imgSrc: "https://media.giphy.com/media/B1SGZpx6nl8O9swASY/giphy.gif",
       desc:
-        "5e D&D tool for building and saving a spellbook.  Built on the MERN stack with mongoose middleware, the ui is a responsive, mobile-first layout.",
+        "5e D&D tool for building and saving a spellbook.  Built on the MERN, the ui is a responsive, mobile-first layout.",
       demo: "https://dnd-5e-spellbook-builder.herokuapp.com/",
       code: "https://github.com/DanFeinstat/5e-Spellbook-Builder",
     },
@@ -104,24 +104,24 @@ const initialState = {
       demo: "https://thawing-anchorage-87258.herokuapp.com/",
       code: "https://github.com/DanFeinstat/Artist-Portfolio",
     },
-    {
-      title: "Hambre",
-      staticSrc: hambreThumbnail,
-      imgSrc: "https://media.giphy.com/media/23g6oI0pZrcqj8a3vH/giphy.gif",
-      desc:
-        "Hambre is a food truck tracking web app.  Built on the MERN stack, this app leverages the Google Maps API and websockets for realtime updates and communication.",
-      demo: "https://hambre-sacramento.herokuapp.com/",
-      code: "https://github.com/DanFeinstat/hambre",
-    },
-    {
-      title: "Delta32",
-      staticSrc: delta32Thumbnail,
-      imgSrc: "https://media.giphy.com/media/13QDrZH1eBKyiWEp9z/giphy.gif",
-      desc:
-        "Delta32 is a hub for creating, storing and viewing health and fitness related videos.  Built with Jquery, Handlebars, Node, Express, SQL and Sequelize while leveraging the Ziggio API.",
-      demo: "https://delta32.herokuapp.com/",
-      code: "https://github.com/DanFeinstat/delta32",
-    },
+    // {
+    //   title: "Hambre",
+    //   staticSrc: hambreThumbnail,
+    //   imgSrc: "https://media.giphy.com/media/23g6oI0pZrcqj8a3vH/giphy.gif",
+    //   desc:
+    //     "Hambre is a food truck tracking web app.  Built on the MERN stack, this app leverages the Google Maps API and websockets for realtime updates and communication.",
+    //   demo: "https://hambre-sacramento.herokuapp.com/",
+    //   code: "https://github.com/DanFeinstat/hambre",
+    // },
+    // {
+    //   title: "Delta32",
+    //   staticSrc: delta32Thumbnail,
+    //   imgSrc: "https://media.giphy.com/media/13QDrZH1eBKyiWEp9z/giphy.gif",
+    //   desc:
+    //     "Delta32 is a hub for creating, storing and viewing health and fitness related videos.  Built with Jquery, Handlebars, Node, Express, SQL and Sequelize while leveraging the Ziggio API.",
+    //   demo: "https://delta32.herokuapp.com/",
+    //   code: "https://github.com/DanFeinstat/delta32",
+    // },
   ],
 };
 
