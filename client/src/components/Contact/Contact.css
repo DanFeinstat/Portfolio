@@ -7,6 +7,7 @@
 .contact-button-container {
   margin-left: 5px;
   margin-right: 5px;
+  cursor: pointer;
 }
 @media (min-width: 668px) {
   .contact-button-container {
@@ -14,6 +15,6 @@
   }
 
   .contact-button-container:hover {
-    cursor: pointer;
+    transform: scale(1.1);
   }
 }

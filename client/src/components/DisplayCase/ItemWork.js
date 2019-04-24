@@ -4,10 +4,14 @@ import "./ItemWork.css";
 
 class ItemWork extends Component {
   toggleToGif = e => {
-    e.target.src = this.props.src;
+    if (this.props.src != null) {
+      e.target.src = this.props.src;
+    }
   };
   toggleOffGif = e => {
-    e.target.src = this.props.static;
+    if (this.props.src != null) {
+      e.target.src = this.props.static;
+    }
   };
 
   toggleGif = e => {
@@ -60,8 +64,8 @@ class ItemWork extends Component {
             this.props.width < 1000
               ? "card-container-full"
               : this.props.width > 1450
-                ? "card-container-third"
-                : "card-container-half"
+              ? "card-container-third"
+              : "card-container-half"
           }
         >
           <div className="card card--big">

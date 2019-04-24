@@ -9,6 +9,7 @@ import {
 import hambreThumbnail from "../images/hambreThumbnail.png";
 import delta32Thumbnail from "../images/delta32Thumbnail.png";
 import artPortThumbnail from "../images/artPortThumbnail.png";
+import chatAppThumbnail from "../images/chatAppThumbnail.png";
 import dndSpellThumbnail from "../images/dndSpellThumbnail.png";
 
 const initialState = {
@@ -57,14 +58,14 @@ const initialState = {
   ],
   toolsFront: [
     {
-      name: "Javascript",
-      imgSrc:
-        "https://www.berkeleypubliclibrary.org/sites/default/files/images/featured/1200px-unofficial_javascript_logo_2.svg_.png?slideshow=true&slideshowAuto=false&slideshowSpeed=4000&speed=350&transition=fade",
-    },
-    {
       name: "React",
       imgSrc:
         "http://premium-templates.org/ecommerce/reactjs/images/reactjsicon.png",
+    },
+    {
+      name: "Javascript",
+      imgSrc:
+        "https://www.berkeleypubliclibrary.org/sites/default/files/images/featured/1200px-unofficial_javascript_logo_2.svg_.png?slideshow=true&slideshowAuto=false&slideshowSpeed=4000&speed=350&transition=fade",
     },
     {
       name: "Redux",
@@ -80,7 +81,7 @@ const initialState = {
       imgSrc: "https://cdn0.iconfinder.com/data/icons/HTML5/512/HTML_Logo.png",
     },
     {
-      name: "CSS",
+      name: "CSS3",
       imgSrc:
         "https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png",
     },
@@ -94,6 +95,15 @@ const initialState = {
         "5e D&D tool for building and saving a spellbook.  Built on the MERN, the ui is a responsive, mobile-first layout.",
       demo: "https://dnd-5e-spellbook-builder.herokuapp.com/",
       code: "https://github.com/DanFeinstat/5e-Spellbook-Builder",
+    },
+    {
+      title: "Chat App",
+      staticSrc: chatAppThumbnail,
+      imgSrc: null,
+      desc:
+        "Real-time group chat app with persistent data.  Video game themed as it was originally a project for an IGN challenge.  MERN stack with web sockets.",
+      demo: "https://safe-citadel-67645.herokuapp.com/",
+      code: "https://github.com/DanFeinstat/Chat-App",
     },
     {
       title: "Art Portfolio",

@@ -1,0 +1,55 @@
+.r-container {
+  height: 10vh;
+  width: 100vw;
+  background-color: #4a6572;
+  overflow-y: auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.r-contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.r-btn {
+  /* font-weight: bold; */
+  font-size: 110%;
+  display: block;
+  width: auto;
+  border: none;
+  color: black;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border-radius: 2px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: scale 0.3s, color 0.3s, background-color 0.2s; /* Safari */
+  transition: scale 0.3s, color 0.3s, background-color 0.2s;
+}
+
+.r-btn:hover {
+  background-color: #008cba;
+  color: whitesmoke;
+  transform: scale(1.2);
+}
+
+.r-btn:active {
+  background-color: rgb(183, 37, 40, 0.4);
+  outline: 0;
+}
+
+.r-selected {
+  background-color: rgb(183, 37, 40, 0.4);
+}
