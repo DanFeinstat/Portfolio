@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Resume.css";
-import DanFeinstatCV from "../../resume/DanFeinstatCV.pdf";
+import DanFeinstatCV from "../../resume/DanFeinstatOnlineCV.pdf";
 
 const Resume = props => {
   return (
