@@ -111,7 +111,7 @@ const initialState = {
       imgSrc: "https://media.giphy.com/media/1nawH619mxLyrNGHYO/giphy.gif",
       desc:
         "Art portfolio built in React and Node with a mobile-first responsive design.  Leverages nodeMailer to allow contact and comments while protecting the owner's contact data.",
-      demo: "https://thawing-anchorage-87258.herokuapp.com/",
+      demo: "https://victoriabloedau.herokuapp.com/",
       code: "https://github.com/DanFeinstat/Artist-Portfolio",
     },
     // {
