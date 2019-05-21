@@ -6,8 +6,11 @@ import {
   GET_LISTS,
   GET_LISTSANDICONS,
 } from "../actions/actions";
+import reactIcon from "../images/favicon.ico";
 import hambreThumbnail from "../images/hambreThumbnail.png";
 import delta32Thumbnail from "../images/delta32Thumbnail.png";
+import todoThumbnail from "../images/todoThumbnail.png";
+import calCalcThumbnail from "../images/calCalcThumbnail.png";
 import artPortThumbnail from "../images/artPortThumbnail.png";
 import chatAppThumbnail from "../images/chatAppThumbnail.png";
 import dndSpellThumbnail from "../images/dndSpellThumbnail.png";
@@ -59,8 +62,7 @@ const initialState = {
   toolsFront: [
     {
       name: "React",
-      imgSrc:
-        "http://premium-templates.org/ecommerce/reactjs/images/reactjsicon.png",
+      imgSrc: reactIcon,
     },
     {
       name: "Javascript",
@@ -97,11 +99,22 @@ const initialState = {
       code: "https://github.com/DanFeinstat/5e-Spellbook-Builder",
     },
     {
+      title: "Calorie Calc + Todo",
+      staticSrc: todoThumbnail,
+      imgSrc: calCalcThumbnail,
+      desc:
+        "This is a combo calorie caluclator and todo list mostly built to work react hooks and gesture.  I used the useReducer, useContext and useEffect hook combination as a pseudo Redux for managing global state.",
+      demo:
+        "https://danfeinstat.github.io/CalorieCounter-TodoList-with-Hooks-and-Gesture/",
+      code:
+        "https://github.com/DanFeinstat/CalorieCounter-TodoList-with-Hooks-and-Gesture",
+    },
+    {
       title: "Chat App",
       staticSrc: chatAppThumbnail,
       imgSrc: null,
       desc:
-        "Real-time group chat app with persistent data.  Video game themed as it was originally a project for an IGN challenge.  MERN stack with web sockets.",
+        "Real-time group chat app with persistent data.  Video game themed for an IGN challenge.  MERN stack with web sockets.  This project is hosted on heroku and so may require a moment for the app to 'wake up'.",
       demo: "https://safe-citadel-67645.herokuapp.com/",
       code: "https://github.com/DanFeinstat/Chat-App",
     },
@@ -110,19 +123,10 @@ const initialState = {
       staticSrc: artPortThumbnail,
       imgSrc: "https://media.giphy.com/media/1nawH619mxLyrNGHYO/giphy.gif",
       desc:
-        "Art portfolio built in React and Node with a mobile-first responsive design.  Leverages nodeMailer to allow contact and comments while protecting the owner's contact data.",
+        "Art portfolio built in React, Node and the nodeMailer package, with a mobile-first responsive design.  This project is hosted on heroku and so may require a few moments for the app to 'wake up'.",
       demo: "https://victoriabloedau.herokuapp.com/",
       code: "https://github.com/DanFeinstat/Artist-Portfolio",
     },
-    // {
-    //   title: "Hambre",
-    //   staticSrc: hambreThumbnail,
-    //   imgSrc: "https://media.giphy.com/media/23g6oI0pZrcqj8a3vH/giphy.gif",
-    //   desc:
-    //     "Hambre is a food truck tracking web app.  Built on the MERN stack, this app leverages the Google Maps API and websockets for realtime updates and communication.",
-    //   demo: "https://hambre-sacramento.herokuapp.com/",
-    //   code: "https://github.com/DanFeinstat/hambre",
-    // },
     // {
     //   title: "Delta32",
     //   staticSrc: delta32Thumbnail,
@@ -172,20 +176,3 @@ const store = createStore(
 );
 
 export default store;
-
-//const allReducers = combineReducers({
-//   products: productsReducer,
-//   user: userReducer,
-// });
-
-// const store = createStore(
-//   allReducers,
-//   {
-//     products: [{ name: "iPhone" }],
-//     user: {
-//       user: "Michael",
-//       tools: "javascript",
-//     },
-//   },
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );

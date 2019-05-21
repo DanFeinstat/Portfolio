@@ -50,7 +50,9 @@ class App extends Component {
     if (e.target.textContent === "Contact") {
       console.log("You can also email me directly at danfeinstat@gmail.com");
     } else if (e.target.textContent === "About") {
-      console.log("Bonus about me: I'm a gemini.");
+      console.log(
+        "Bonus about me: I believe that as a general rule pie is better than cake."
+      );
     } else if (e.target.textContent === "Work") {
       console.log(
         "Hover the images on the cards for gif mode.  Thanks for checking out my work!"
@@ -85,17 +87,7 @@ class App extends Component {
         />
         {this.props.toDisplay === "Toolkit" ? (
           <div>
-            {/* <ToolFilter
-              icons={this.props.icons}
-              lists={this.props.lists}
-              listsAndIcons={this.props.listsAndIcons}
-              showIcons={this.toDisplayIcons}
-              showLists={this.toDisplayLists}
-              showListsAndIcons={this.toDisplayListsAndIcons}
-            /> */}
             <DisplayCase name="Front End" toDisplay={this.props.toDisplay}>
-              {/* {this.props.icons ? (
-                this.props.lists ? ( */}
               <ToolList>
                 {this.props.toolsFront.map((tool, index) => {
                   return (
@@ -108,40 +100,8 @@ class App extends Component {
                   );
                 })}
               </ToolList>
-              {/* ) : (
-                  <div className="t-icons-container">
-                    {this.props.toolsFront.map((tool, index) => {
-                      return (
-                        <ItemTool
-                          key={index}
-                          name={tool.name}
-                          src={tool.imgSrc}
-                        />
-                      );
-                    })}
-                  </div>
-                )
-              ) : null}
-              {this.props.lists ? (
-                this.props.icons ? null : (
-                  <ToolList>
-                    {this.props.toolsFront.map((tool, index) => {
-                      return (
-                        <ToolListItem
-                          key={index}
-                          name={tool.name}
-                          src={tool.imgSrc}
-                          icons={false}
-                        />
-                      );
-                    })}
-                  </ToolList>
-                )
-              ) : null} */}
             </DisplayCase>
             <DisplayCase name="Back End" toDisplay={this.props.toDisplay}>
-              {/* {this.props.icons ? (
-                this.props.lists ? ( */}
               <ToolList>
                 {this.props.toolsBack.map((tool, index) => {
                   return (
@@ -154,40 +114,8 @@ class App extends Component {
                   );
                 })}
               </ToolList>
-              {/* ) : (
-                  <div className="t-icons-container">
-                    {this.props.toolsBack.map((tool, index) => {
-                      return (
-                        <ItemTool
-                          key={index}
-                          name={tool.name}
-                          src={tool.imgSrc}
-                        />
-                      );
-                    })}
-                  </div>
-                )
-              ) : null}
-              {this.props.lists ? (
-                this.props.icons ? null : (
-                  <ToolList>
-                    {this.props.toolsBack.map((tool, index) => {
-                      return (
-                        <ToolListItem
-                          key={index}
-                          name={tool.name}
-                          src={tool.imgSrc}
-                          icons={false}
-                        />
-                      );
-                    })}
-                  </ToolList>
-                )
-              ) : null} */}
             </DisplayCase>
             <DisplayCase name="Other Tools" toDisplay={this.props.toDisplay}>
-              {/* {this.props.icons ? (
-                this.props.lists ? ( */}
               <ToolList>
                 {this.props.toolsOther.map((tool, index) => {
                   return (
@@ -200,36 +128,6 @@ class App extends Component {
                   );
                 })}
               </ToolList>
-              {/* ) : (
-                  <div className="t-icons-container">
-                    {this.props.toolsOther.map((tool, index) => {
-                      return (
-                        <ItemTool
-                          key={index}
-                          name={tool.name}
-                          src={tool.imgSrc}
-                        />
-                      );
-                    })}
-                  </div>
-                )
-              ) : null}
-              {this.props.lists ? (
-                this.props.icons ? null : (
-                  <ToolList>
-                    {this.props.toolsOther.map((tool, index) => {
-                      return (
-                        <ToolListItem
-                          key={index}
-                          name={tool.name}
-                          src={tool.imgSrc}
-                          icons={false}
-                        />
-                      );
-                    })}
-                  </ToolList>
-                )
-              ) : null} */}
             </DisplayCase>
             <Footer />
           </div>
